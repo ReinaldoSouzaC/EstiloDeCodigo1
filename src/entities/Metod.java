@@ -11,24 +11,16 @@ public class Metod {
 		this.horasTrabalho = horasTrabalho;
 		this.inss = inss;
 	}
-
 	public double salario() {
 		return shoras * horasTrabalho;
 	}
-	
 	public double liquido() {
 		return salario() - salario() * inss / 100;
 	}
-	
-	public double getHoras() {
-		return shoras;
-	}
-
-	public double getHorasTrabalho() {
-		return horasTrabalho;
-	}
-
-	public double getInss() {
-		return inss;
+	public String toString() {
+		return "Salario: $"
+				+ String.format("%.2f%n", salario())
+				+ "Liquido: $"
+				+ String.format("%.2f%n", liquido());
 	}
 }

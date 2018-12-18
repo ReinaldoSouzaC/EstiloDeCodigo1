@@ -20,12 +20,8 @@ public class Inss {
 		double inss = sc.nextDouble();
 		Metod met = new Metod(hora, horasTrabalho, inss);
 		
-		double salario = met.salario();
-		double salarioliquido = met.liquido();
-		
 		System.out.println();
-		System.out.println("Salario: " + salario);
-		System.out.println("Salario liquido: " + salarioliquido);
+		System.out.println(met.toString());
 		
 		sc.close();
 	}
